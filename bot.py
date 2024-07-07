@@ -1,14 +1,13 @@
-API = '7477387899:AAHltCgLvQa7wZAt8zocfGJGp7QtvUSpv3A'
-ADMIN = 1210146115
-bot = ''
-# -----------------------------------------------------------
 import telebot
 import subprocess
 import os
 import sys
 import time
+import config
 
 bot = telebot.TeleBot(API)
+API = config.API
+ADMIN = config.ADMIN
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message): # команда /start
