@@ -5,9 +5,9 @@ import sys
 import time
 import config
 
-bot = telebot.TeleBot(API)
 API = config.API
 ADMIN = config.ADMIN
+bot = telebot.TeleBot(API)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message): # команда /start
